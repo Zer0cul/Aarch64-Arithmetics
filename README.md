@@ -512,7 +512,7 @@ HLT
 
 Какие знания мы получили:
 1. Архитектура AArch64, типы и форматы данных, регистры, команды, выравнивание данных и команд, порядок следования байт  
-2. Как переводить прогамму в машинный код в ручную без ассемблера
+2. Как переводить программу в машинный код вручную без ассемблера
 3. Работу с отладчиком: как устанавливать точки останова, смотреть регистры, подключаться к платформе
 
 ## Материалы, руководства и ссылки на инструменты
@@ -521,14 +521,15 @@ HLT
 * [Загрузка QEMU](https://www.qemu.org/download/#windows)
 * [QEMU для window 64](https://qemu.weilnetz.de/w64/)
 * [Aarch64 GNU compiler collection](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
+
 Опционально
+
 * [Visual Studio Code](https://code.visualstudio.com/)
 * Hex Editor plugin for VS Code идентефикатор ms-vscode.hexeditor
 ### Руководства и справочники
 * [Arm Architecture Reference Manual for A-profile architecture](https://developer.arm.com/documentation/ddi0487/latest/) - Справочное руководство по архитектуре, в формате pdf
 * [Справочник по иструкциям AArch64](https://developer.arm.com/documentation/ddi0602/2024-12/?lang=en)
 * [Learn the architecture - A64 Instruction Set Architecture Guide](https://developer.arm.com/documentation/102374/0102) - обучения командам c примерами и задачами на проверку знаний 
-
 
 
 ### Команды gdb
