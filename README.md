@@ -3,12 +3,16 @@
 ## Инструменты
 [Aarch64 GNU compiler collection](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
 В данном случае я использую версию 14.1.
+
 Целевая (target) платформа -- Baremetal, скачивайте инструменты для вашей несущей платформы, в моем случае это
 Windows (mingw-w64-x86_64) hosted cross toolchains.
 для 32-битной Windows следует выбрать Windows (mingw-w64-i686) hosted cross toolchains, этот набор будет работать и под 64-битной Windows. Важно выбрать правильную целевую архитектуру AArch64 bare-metal target (aarch64-none-elf). Я использую Raspberry Pi 3B в качестве цели поэтому выбор AArch64. Если попытаться испльзовать набор AArch32 для 64-битной архитектуры, то отладчик не сможет правльно интерпретировать данный.
 
 Для удобства возмём Visual Studio Code, плагин Native Debug, который реализует подключение gdb к эмулятору qemu
 Ещё для удобства потребуется Hex Editor, есть плагин для Visual Studio Code, или можно использовать любой удобный для вас например HxD. 
+
+Так же понадобиться эмулятор QEMU
+[QEMU для window 64](https://qemu.weilnetz.de/w64/)
 
 Установите путь в системых переменных для запуска gdb и эмулятора qemu
 запускаем виртуальную машину 
@@ -512,17 +516,20 @@ HLT
 3. Работу с отладчиком: как устанавливать точки останова, смотреть регистры, подключаться к платформе
 
 ## Материалы, руководства и ссылки на инструменты
+Репозиторий с этим текстом [Git Hub](https://github.com/Zer0cul/Aarch64-Arithmetics)
 ### Использованые инструменты
-[Загрузка QEMU](https://www.qemu.org/download/#windows)
-[QEMU для window 64](https://qemu.weilnetz.de/w64/)
-[Aarch64 GNU compiler collection](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
+* [Загрузка QEMU](https://www.qemu.org/download/#windows)
+* [QEMU для window 64](https://qemu.weilnetz.de/w64/)
+* [Aarch64 GNU compiler collection](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
 Опционально
-[Visual Studio Code](https://code.visualstudio.com/)
-Hex Editor plugin for VS Code идентефикатор ms-vscode.hexeditor
+* [Visual Studio Code](https://code.visualstudio.com/)
+* Hex Editor plugin for VS Code идентефикатор ms-vscode.hexeditor
 ### Руководства и справочники
-[Arm Architecture Reference Manual for A-profile architecture](https://developer.arm.com/documentation/ddi0487/latest/) - Справочное руководство по архитектуре, в формате pdf
-[Справочник по иструкциям AArch64](https://developer.arm.com/documentation/ddi0602/2024-12/?lang=en)
-[Learn the architecture - A64 Instruction Set Architecture Guide](https://developer.arm.com/documentation/102374/0102) - обучения командам c примерами и задачами на проверку знаний 
+* [Arm Architecture Reference Manual for A-profile architecture](https://developer.arm.com/documentation/ddi0487/latest/) - Справочное руководство по архитектуре, в формате pdf
+* [Справочник по иструкциям AArch64](https://developer.arm.com/documentation/ddi0602/2024-12/?lang=en)
+* [Learn the architecture - A64 Instruction Set Architecture Guide](https://developer.arm.com/documentation/102374/0102) - обучения командам c примерами и задачами на проверку знаний 
+
+
 
 ### Команды gdb
 запуск gdb 
