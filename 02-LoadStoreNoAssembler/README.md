@@ -331,6 +331,9 @@ Data processing - register
  • Move (register). [ MOV ]
 
 ## Руководства и справочники
+### Youtube
+[Youtube](https://youtu.be/nu5z6qfLNU8)
+### Cправочники
 * Справочное руководство по архитектуре  [Справочник по иструкциям AArch64](https://developer.arm.com/documentation/ddi0602/2024-12/?lang=en)
 * Глава из руководства Chapter C3 A64 Instruction Set Overview
 
