@@ -199,7 +199,7 @@ _start:
 	LDR X1, b
 	ADD X0,X0,X1
 	HLT
-.space 8 , 0x00
+.space 16 , 0x00
 a:
 	.word 0x2
 	.word 0x0
@@ -212,7 +212,7 @@ b:
 как и прошлом примере создайм  файл в Hex редакторе
 kerne8.img и переносим данные
 ```
-00 00 00 58 
+00 01 00 58 
 21 01 00 58
 00 00 01 8B 
 00 00 40 D4
@@ -638,11 +638,13 @@ _start:
 	LDR	X0, [X3, #0]
 	LDR	X1, [X3, #8]
 	ADD 	X0,X0,X1
-	HLT
+	HLT	#0
 
+//Page 1 contains data. Expected physical memory address 0x81000
 	.org 0x1000
 a:	.dword 0x2
 b:	.dword 0x3
+
 ```
 
 ### Модификация для 64-бит
